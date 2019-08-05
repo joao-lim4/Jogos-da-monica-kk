@@ -1,0 +1,11 @@
+.acerto{}
+.erro{}
+.total{}
+.remover-equipe{
+	opacity: 0;
+	transition: 0.5;
+}
+#remover-botao{
+	opacity: 0;
+	
+}

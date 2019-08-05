@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Negociações</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+</head>
+<body class="container">
+    
+    <h1 class="text-center">Tabela de equipes</h1>
+    
+    <form class="form"  onsubmit="negociacaoController.adiciona(event)">
+        
+        <div class="form-group">
+            <label for="nome" class="fadeOut" >Nome da Equipe</label>
+            <input type="text"  id="nome" class="form-control" class="fadeOutButton" required autofocus/>        
+        </div>    
+        <div class="form-group">
+            <label for="acerto" class="fadeOut">Acertos</label>
+            <input type="number" min="0" step="0" id="acerto" class="form-control" class="fadeOutButton" value="0" required/>
+        </div>
+        
+        <div class="form-group">
+            <label for="erros" class="fadeOut">Erros</label>
+            <input id="erros" type="number" class="form-control" class="fadeOutButton"  min="0" step="0" value="0" required />
+        </div>
+        <button id="botao-incluir"class="btn btn-primary" type="submit">Incluir</button>
+    </form>
+    <br>
+    <br>
+    <table class="table table-hover table-bordered" id="table">
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th>ACERTOS</th>
+                <th>ERROS</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        
+        <tbody class="campo-tbody"></tbody>
+        </tbody>
+        <tfoot class="tfoat">
+        </tfoot>
+    </table>
+    <script src="TabelaController.js"></script>
+    <script src="Atualizartabela.js"></script>
+    <script src="AlterarTabela.js"></script>
+    <script src="ValorTotal.js"></script>
+    <script src="RemoverEquipedaTabela.js"></script>
+    </body>
+    </html>
